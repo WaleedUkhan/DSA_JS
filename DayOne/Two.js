@@ -1,6 +1,7 @@
 let num = require("prompt-sync")();
 let myNum = Number(num("Enter your Number: "));
-console.log(`My entered num is : ${myNum}`);
+
+// console.log(`My entered num is : ${myNum}`);
 
 // for(let i = 1 ; i<= myNum; i++){
 //     for(let j=1; j<=myNum; j++){
@@ -41,11 +42,11 @@ console.log(`My entered num is : ${myNum}`);
 
 // Method ONE
 
-for(let i = 1 ; i <= myNum ; i++){
-    for(let j = myNum; j >= i ; j--){
-         process.stdout.write("*  "); 
-    }
-    console.log(); 
-}
+// for(let i = 1 ; i <= myNum ; i++){
+//     for(let j = myNum; j >= i ; j--){
+//          process.stdout.write("*  "); 
+//     }
+//     console.log(); 
+// }
 
 
