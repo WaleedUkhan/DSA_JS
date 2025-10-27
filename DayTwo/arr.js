@@ -61,25 +61,57 @@
 
 
 
-// Right Ratation by K elements 
+// // Right Ratation by K elements 
 
+// let arr = [1, 2, 3, 4, 5];
+// let input = require('prompt-sync')();
+// let num = Number(input("Enter num: "));
+
+// num = num % arr.length  
+// let count = 0; 
+
+// for (let j = 0; j < num; j++) {
+//     count++
+//     let copy = arr[arr.length - 1];
+//     for (let i = arr.length - 1; i > 0; i--) {
+//         arr[i] = arr[i - 1];
+//     }
+
+//     arr[0] = copy;
+// }
+
+// console.log(arr);
+// console.log(count);
+
+
+// By using Better Alogorithm 
+//  rotates the array to the left by num positions.
+// let arr = [1, 2, 3, 4, 5];
+// let input = require('prompt-sync')();
+// let num = Number(input("Enter num: "));
+// let temp = new Array(arr.length);
+
+// num = num % arr.length
+
+// for (let i = 0; i < arr.length; i++) {
+//     temp[i] = arr[(i + num) % arr.length];
+// }
+
+// console.log(temp);
+
+
+//  rotates the array to the Right by num positions.
 
 let arr = [1, 2, 3, 4, 5];
 let input = require('prompt-sync')();
 let num = Number(input("Enter num: "));
+let temp = new Array(arr.length);
 
-num = num % arr.length  
-let count = 0; 
+num = num % arr.length
 
-for (let j = 0; j < num; j++) {
-    count++
-    let copy = arr[arr.length - 1];
-    for (let i = arr.length - 1; i > 0; i--) {
-        arr[i] = arr[i - 1];
-    }
-
-    arr[0] = copy;
+for (let i = 0; i < arr.length; i++) {
+    // temp[i] = arr[(i - num) % arr.length]; 
+    temp[(i + num) % arr.length] = arr[i] ;
 }
 
-console.log(arr);
-console.log(count);
+console.log(temp);
